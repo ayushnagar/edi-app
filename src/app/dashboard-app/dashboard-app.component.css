@@ -1,0 +1,61 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.dashbord-card-title{
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.example-container {
+  
+  height: 400px;
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.header-text{
+ font-family: Verdana;
+ font-weight: bold;
+} 
+
+.example-card {
+  max-width: 100px;
+}
+
+.header-text{
+ font-family: Verdana;
+ font-weight: bold;
+} 
+
+tr .mat-footer-row{
+  font-weight: bold;
+}
