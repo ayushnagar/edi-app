@@ -1,0 +1,42 @@
+<mat-card class="dashboard-card">
+  <mat-card-title class="dashbord-card-title">
+      Jalgaon - Inside
+  </mat-card-title>
+  <mat-card-content class="example-container">
+    <table mat-table [dataSource]="dataSource" mat-elevation-z8 class="table ">
+
+      <!-- Plant Column -->
+      <ng-container matColumnDef="Werks" sticky>
+        <th mat-header-cell *matHeaderCellDef> Plant </th>
+        <td mat-cell *matCellDef="let element"> {{element.Werks}} </td>
+      </ng-container>
+  
+      <!-- Finish Column -->
+      <ng-container matColumnDef="Weaving_Source" sticky>
+        <th mat-header-cell *matHeaderCellDef> Weaving Source </th>
+        <td mat-cell *matCellDef="let element"> {{element.Weaving_Source}} </td>
+      </ng-container>
+  
+      <!-- Civil Column -->
+      <ng-container matColumnDef="DP_Delivery_Year_Month">
+        <th mat-header-cell *matHeaderCellDef> DP Delivery Year Month </th>
+        <td mat-cell *matCellDef="let element"> {{element.DP_Delivery_Year_Month}} </td>
+      </ng-container>
+  
+      <!-- Exotic Column -->
+      <ng-container matColumnDef="Sum_of_Balance_Qty">
+        <th mat-header-cell *matHeaderCellDef> Sum of Balance Qty </th>
+        <td mat-cell *matCellDef="let element"> {{element.Sum_of_Balance_Qty}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Sum_of_GP_M">
+        <th mat-header-cell *matHeaderCellDef> Sum of GP M </th>
+        <td mat-cell *matCellDef="let element"> {{element.Sum_of_GP_M}} </td>
+      </ng-container>
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+    </table>
+  </mat-card-content>
+</mat-card>

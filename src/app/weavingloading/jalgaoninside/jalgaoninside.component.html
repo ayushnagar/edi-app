@@ -1,0 +1,82 @@
+<mat-card class="dashboard-card">
+  <mat-card-title class="dashbord-card-title">
+      Jalgaon - Inside
+  </mat-card-title>
+  <mat-card-content class="example-container">
+    <table mat-table [dataSource]="dataSource" mat-elevation-z8 class="table ">
+
+      <!-- Plant Column -->
+      <ng-container matColumnDef="Werks" sticky>
+        <th mat-header-cell *matHeaderCellDef> Plant </th>
+        <td mat-cell *matCellDef="let element"> {{element.Werks}} </td>
+      </ng-container>
+  
+      <!-- Finish Column -->
+      <ng-container matColumnDef="Weaving_Source" sticky>
+        <th mat-header-cell *matHeaderCellDef> Weaving Source </th>
+        <td mat-cell *matCellDef="let element"> {{element.Weaving_Source}} </td>
+      </ng-container>
+  
+      <!-- Civil Column -->
+      <ng-container matColumnDef="DP_Delivery_Year_Month">
+        <th mat-header-cell *matHeaderCellDef> DP Delivery Year Month </th>
+        <td mat-cell *matCellDef="let element"> {{element.DP_Delivery_Year_Month}} </td>
+      </ng-container>
+  
+      <!-- Exotic Column -->
+      <ng-container matColumnDef="Sum_of_Balance_Qty">
+        <th mat-header-cell *matHeaderCellDef> Sum of Balance Qty </th>
+        <td mat-cell *matCellDef="let element"> {{element.Sum_of_Balance_Qty}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Sum_of_GP_M">
+        <th mat-header-cell *matHeaderCellDef> Sum of GP M </th>
+        <td mat-cell *matCellDef="let element"> {{element.Sum_of_GP_M}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Grey_Picks_per_Mtr">
+        <th mat-header-cell *matHeaderCellDef> Grey Picks per Mtr </th>
+        <td mat-cell *matCellDef="let element"> {{element.Grey_Picks_per_Mtr}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="No_of_Looms">
+        <th mat-header-cell *matHeaderCellDef> No of Looms </th>
+        <td mat-cell *matCellDef="let element"> {{element.No_of_Looms}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Efficiency">
+        <th mat-header-cell *matHeaderCellDef> Efficiency </th>
+        <td mat-cell *matCellDef="let element"> {{element.Efficiency}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Speed">
+        <th mat-header-cell *matHeaderCellDef> Speed </th>
+        <td mat-cell *matCellDef="let element"> {{element.Speed}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Per_day_Production">
+        <th mat-header-cell *matHeaderCellDef> Per day Production </th>
+        <td mat-cell *matCellDef="let element"> {{element.Per_day_Production}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="No_of_days_loading">
+        <th mat-header-cell *matHeaderCellDef> No of days loading %</th>
+        <td mat-cell *matCellDef="let element"> {{element.No_of_days_loading}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Cummulative_load">
+        <th mat-header-cell *matHeaderCellDef> Cummulative load</th>
+        <td mat-cell *matCellDef="let element"> {{element.Cummulative_load}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Cut_Off">
+        <th mat-header-cell *matHeaderCellDef> Cut Off</th>
+        <td mat-cell *matCellDef="let element"> {{element.Cut_Off}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+    </table>
+  </mat-card-content>
+</mat-card>

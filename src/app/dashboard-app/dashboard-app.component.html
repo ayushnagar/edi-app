@@ -1,8 +1,6 @@
-<mat-toolbar color="primary">
-  <img src="../../assets/images/Raymond_Logo.jpg" width="10%">
-</mat-toolbar>
+
 <div class="grid-container">
-  
+  <app-report-list></app-report-list>
   <mat-grid-list cols="3" rowHeight="550px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">

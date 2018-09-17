@@ -56,6 +56,13 @@ table {
  font-weight: bold;
 } 
 
-tr .mat-footer-row{
+tr.mat-footer-row{
   font-weight: bold;
+}
+
+th.mat-header-cell{
+  font-weight: bold;
+  font-family: Verdana;
+  background-color: purple;
+  color: white;
 }

@@ -1,0 +1,39 @@
+th.mat-header-cell{
+    font-weight: bold;
+    font-family: Verdana;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 2px;
+  }
+
+  td.mat-cell{
+      text-align: center;
+  }
+
+.header-text{
+    font-family: Verdana;
+    font-weight: bold;
+} 
+
+.dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}  
+
+.dashbord-card-title{
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.example-container {
+    
+    height: 500px;
+    width: 100%;
+    overflow: auto;
+}

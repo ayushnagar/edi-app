@@ -1,0 +1,23 @@
+<div class="grid-container">
+<app-report-list></app-report-list>
+<mat-grid-list cols="6" rowHeight="650px">
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+      <app-chindinside></app-chindinside>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+      <app-vapiinside></app-vapiinside>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+      <app-jalgaoninside></app-jalgaoninside>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <app-chindoutside></app-chindoutside>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <app-vapioutside></app-vapioutside>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <app-jalgaonoutside></app-jalgaonoutside>
+      </mat-grid-tile>
+</mat-grid-list>
+</div>

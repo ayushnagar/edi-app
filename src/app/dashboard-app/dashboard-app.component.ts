@@ -31,17 +31,10 @@ export class DashboardAppComponent {
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
       if (matches) {
-        // return [
-        //   { title: 'Card 1', cols: 1, rows: 1 },
-        //   { title: 'Card 2', cols: 1, rows: 1 },
-          
-        // ];
       }
 
       return [
-        { id : 1,title: 'Total Marketwise Finishing Order Balance', cols: 2, rows: 1 },
-        { id : 2,title: 'Other Reports', cols: 1, rows: 1 },
-        
+        { id : 1,title: 'Total Marketwise Finishing Order Balance', cols: 3, rows: 1 },
       ];
     })
   );

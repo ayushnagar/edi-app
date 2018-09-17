@@ -1,26 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ReportsService } from '../services/reports.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-home-app',
   templateUrl: './home-app.component.html',
-  styleUrls: ['./home-app.component.css']
+  styleUrls: ['./home-app.component.css'],
+  providers : [ReportsService]
 })
 export class HomeAppComponent implements OnInit {
 
-  reports : any = [{header : "Spinning Leveling", content : "Spinning Leveling Content"},
-                   {header : "Sim Confirmation", content : "Sim Confirmation Content"},
-                   {header : "YPP99", content : "YPP99 Content"},
-                   {header : "Purchase Status Report", content : "Purchase Status Report Content"},
-                   {header : "Sim Confirmation", content : "Sim Confirmation Content"},
-                   {header : "Sim Confirmation", content : "Sim Confirmation Content"},
-                   {header : "Sim Confirmation", content : "Sim Confirmation Content"},
-                   {header : "Sim Confirmation", content : "Sim Confirmation Content"},
-                   {header : "Sim Confirmation", content : "Sim Confirmation Content"}
-                  ]
+  reports : any = []
+  reportName : string;
 
-  constructor() { }
+  constructor(private reportServ: ReportsService, private route: Router) { 
+    this.getReportList();
+  }
 
   ngOnInit() {
+  }
+
+  getReportList(){
+    this.reportServ.getReportList()
+      .subscribe((res : any) => {
+        //console.log(res);
+        this.reports = res;
+      });
+  }
+
+  redirectreport(){
+    this.reportName = 'weavingloading'
+    this.route.navigate(['/' + this.reportName]);
   }
 
 }
